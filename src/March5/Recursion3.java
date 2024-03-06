@@ -5,19 +5,17 @@ import java.util.Scanner;
 /*
  */
 public class Recursion3 {
-    public static int countHi(String str) {
-    if(str.length()<2)
-      return 0;
-    if(str.substring(0,2).equals("hi"))
-        return 1+countHi(str.substring(2)); 
-    return countHi(str.substring(1)); 
-  }
+    public static int powerN(int base, int n) {
+        if(n==1)return base;
+        return base*powerN(base,n-1);
+      }
 
-public static void main(String[] args) {
+  public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
-    System.out.println("Enter the String:");
-    String str=sc.next();
-    System.out.println(countHi(str));
-
-}
+    System.out.println("Enter the Base:");
+    int base=sc.nextInt();
+    System.out.println("Enter the Power:");
+    int pr=sc.nextInt();
+    System.out.println(powerN(base, pr));
+     }
 }

@@ -1,5 +1,7 @@
 package March5;
 
+import java.util.Scanner;
+
 public class Recusion1 {
 
 	public static String allStar(String str) {
@@ -12,7 +14,10 @@ public class Recusion1 {
 		}
 
 	public static void main(String[] args) {
-		System.out.println(allStar("aaaa"));
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String:");
+        String str=sc.next();
+		System.out.println(allStar(str));
 	 	
 	}
 
