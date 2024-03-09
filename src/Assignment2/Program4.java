@@ -14,16 +14,18 @@ public class Program4 {
 		float wt=sc.nextFloat();
 		System.out.println("Enter the Person Height:");
 		float ht=sc.nextFloat();		
-		System.out.print("BMI Value of  The Person ="+calcBMI(name,wt,ht));	
-		
+		calcBMI(name,wt,ht);
 
 	}
 
-	private static float calcBMI(String name, float wt, float ht) {
+	private static void calcBMI(String name, float wt, float ht) {
+		if(ht<=0 || wt<=0) {
+			System.err.println("Invalid \nEnter Height and weight in +ve Value");
+			return;
+		}
 		float metre=(float)(ht/100.0);
 		float bmi=(float) (wt/(Math.pow(metre,2)));;
-		return bmi;
-		
+		System.out.print("BMI Value of  The Person ="+bmi);	
 	}
 
 }
