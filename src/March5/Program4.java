@@ -1,4 +1,4 @@
-package mypro;
+package March5;
 
 import java.util.Scanner;
 
@@ -16,15 +16,15 @@ public class Program4 {
 		int i=0;int j=0;
 		char[][]ch=new char[n][s.length()-1];
 		while(st<s.length()) {	
-			while(st<s.length() &&i<n && j<n)
+			while(st<s.length() && i<n)
 			{
-				System.out.println(i+""+j);
+				//System.out.println(i+""+j);
 				ch[i++][j]=s.charAt(st++);
 			}
 			i-=2;
 			j+=1;
 			while(st<s.length()&&j>-1 && i>-1)
-			{System.out.println(i+""+j);
+			{ //System.out.println(i+""+j);
 				ch[i--][j++]=s.charAt(st++);
 			}
 			i+=2;j--;			

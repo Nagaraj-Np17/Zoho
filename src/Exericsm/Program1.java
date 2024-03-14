@@ -17,16 +17,16 @@ public class Program1 {
 		
 	}
 	
-	static boolean AnnalynsInfiltration_canFastAttack(boolean knightIsAwake){
+	public static boolean AnnalynsInfiltration_canFastAttack(boolean knightIsAwake){
 		return !knightIsAwake;
 	}
-	boolean AnnalynsInfiltration_canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake){
+	public boolean AnnalynsInfiltration_canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake){
 		return  (knightIsAwake || archerIsAwake || prisonerIsAwake);
 	}
-	static boolean AnnalynsInfiltration_canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake){
+	public static boolean AnnalynsInfiltration_canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake){
 		return (!archerIsAwake && prisonerIsAwake);
 	}
-	static boolean AnnalynsInfiltration_canFreePrisoner(boolean knightIsAwake,
+	public static boolean AnnalynsInfiltration_canFreePrisoner(boolean knightIsAwake,
 		boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
 		return  petDogIsPresent?(!archerIsAwake):
 			(!knightIsAwake && ! archerIsAwake && prisonerIsAwake);
